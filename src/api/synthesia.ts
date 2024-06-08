@@ -40,26 +40,19 @@ export const videoStatus = async (videoId: string) => {
   const maxAttempts = 100;
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    try {
-      const response = await axios.get(`${SYNTHESIA_API_URL}/${videoId}`, {
-        headers: {
-          Authorization: `${import.meta.env.VITE_SYNTHESIA_API_KEY}`,
-        },
-      });
+    const response = await axios.get(`${SYNTHESIA_API_URL}/${videoId}`, {
+      headers: {
+        Authorization: `${import.meta.env.VITE_SYNTHESIA_API_KEY}`,
+      },
+    });
 
-      const videoData = response.data;
+    const videoData = response.data;
 
-      if (videoData.status === "complete") {
-        return videoData.download;
-      }
-
-      // Wait for the specified interval before polling again
-      await new Promise((resolve) => setTimeout(resolve, pollingInterval));
-    } catch (error) {
-      console.error(`Error polling video status for video ID ${videoId}:`, error);
-      throw error;
+    if (videoData.status === "complete") {
+      return videoData.download;
     }
-  }
 
-  throw new Error("Polling timed out before video was completed");
+    // Wait for the specified interval before polling again
+    await new Promise((resolve) => setTimeout(resolve, pollingInterval));
+  }
 };

@@ -43,16 +43,8 @@ const Info: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (data : FormData) => {
     try {
-      const data: FormData = {
-        companyInfo:
-          "Tech Innovators Inc., a pioneering company in AI and machine learning solutions, dedicated to driving innovation and enhancing productivity across various industries.",
-        productInfo:
-          "Busy professionals aged 30-45 working in the tech industry, who are looking for efficient tools to manage their daily tasks and enhance their productivity without compromising on quality",
-        profileInfo:
-          "Our flagship product, AI Assistant, leverages cutting-edge AI technology to streamline workflow, automate repetitive tasks, and provide insightful analytics to improve decision-making processes.",
-      };
       setLoading(true);
 
       // Generate Script
