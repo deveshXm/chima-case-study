@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+
 import { FormData } from '../types';
-import { validateFormData } from '../utils/validator';
-import TextAreaField from './common/TextAreaField';
+
 import Button from './common/Button';
+import TextAreaField from './common/TextAreaField';
+import { validateFormData } from '../utils/validator';
 
 interface FormProps {
   onSubmit: (data: FormData) => void;

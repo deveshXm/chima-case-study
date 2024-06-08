@@ -1,5 +1,3 @@
-// src/utils/validator.ts
-
 import { FormData } from '../types';
 
 interface ValidationErrors {

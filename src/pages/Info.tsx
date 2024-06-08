@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Form from "../components/Form";
+
 import { FormData } from "../types";
-import { MultiStepLoader } from "../components/common/Loader";
+
+import Form from "../components/Form";
 import { generateScript } from "../api/llm";
+import { MultiStepLoader } from "../components/common/Loader";
 import { generateVideo, videoStatus } from "../api/synthesia";
 
 const loadingStates = [

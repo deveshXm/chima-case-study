@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Button from "../components/common/Button";
 import { useLocation, useNavigate } from "react-router-dom";
+
+import Button from "../components/common/Button";
 import TextAreaField from "../components/common/TextAreaField";
 
 const Dashboard: React.FC = () => {
@@ -46,7 +47,7 @@ const Dashboard: React.FC = () => {
         {/* Feedback form */}
         {!feedbackSubmitted ? (
           <div className="flex flex-col gap-y-5 w-64">
-            <TextAreaField value={feedback} name="feedbackForm" id="feedbackForm" label="" onChange={(e) => setFeedback(e.target.value)}></TextAreaField>
+            <TextAreaField value={feedback} name="feedbackForm" id="feedbackForm" placeholder={"Enter feedback here."} label="" onChange={(e) => setFeedback(e.target.value)}></TextAreaField>
             <Button onClick={handleFeedbackSubmit} text={"Submit Feedback"} />
           </div>
         ) : (

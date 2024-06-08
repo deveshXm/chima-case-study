@@ -1,18 +1,10 @@
 import React from "react";
-import { Route,Routes, Link } from 'react-router-dom';
-import Info from "./pages/Info";
-import Dashboard from "./pages/Dashboard";
-import Error from "./pages/Error";
+import { Route,Routes} from 'react-router-dom';
 
-const Navbar: React.FC = () => {
-  return (
-    <nav className="p-4">
-      <Link to="/" style={{ textDecoration: "none", fontSize: "20px", fontWeight: "bold" }}>
-        VidGen
-      </Link>
-    </nav>
-  );
-};
+import Info from "./pages/Info";
+import Error from "./pages/Error";
+import Navbar from "./components/NavBar";
+import Dashboard from "./pages/Dashboard";
 
 const App: React.FC = () => {
   return (
