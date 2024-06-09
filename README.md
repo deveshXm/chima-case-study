@@ -40,4 +40,4 @@ PersonalizeHub can be deployed on any web hosting platform that supports React a
 
 ## Support and Feedback
 
-For any questions, issues, or feedback regarding PersonalizeHub, please contact our support team at support@personalizehub.com. We welcome any suggestions for improving the application and are committed to providing assistance to our users.
+For any questions, issues, raise an issue and we'll look into it.
